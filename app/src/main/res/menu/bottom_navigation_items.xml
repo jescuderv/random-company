@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_navigation_all_users"
+        android:icon="@drawable/ic_all_users"
+        android:title="@string/bottom_navigation_all" />
+    <item
+        android:id="@+id/bottom_navigation_favorites"
+        android:icon="@drawable/ic_favorites"
+        android:title="@string/bottom_navigation_favorites" />
+    <item
+        android:id="@+id/bottom_navigation_close_users"
+        android:icon="@drawable/ic_location"
+        android:title="@string/bottom_navigation_close_users" />
+</menu>

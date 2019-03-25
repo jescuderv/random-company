@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.activity.UserDetailsActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_details_profile_image"
+        android:layout_width="@dimen/avatar_big"
+        android:layout_height="@dimen/avatar_big"
+        android:layout_margin="@dimen/default_layout_margin"
+        android:transitionName="@string/trans_profile_image_users"
+        app:civ_circle_background_color="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/user_details_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/separation_margin_4"
+        android:layout_marginEnd="@dimen/default_layout_margin"
+        android:layout_toEndOf="@id/user_details_profile_image"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_h5"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_details_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_details_name"
+        android:layout_alignStart="@+id/user_details_name"
+        android:layout_marginTop="1dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/text_h6" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_details_profile_image"
+        android:layout_margin="@dimen/default_layout_margin"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_layout_margin">
+
+            <ImageView
+                android:id="@+id/user_details_registered_date_icon"
+                android:layout_width="@dimen/icon_medium"
+                android:layout_height="@dimen/icon_medium"
+                android:contentDescription="@string/user_details_registered_date"
+                android:src="@drawable/ic_calendar" />
+
+            <TextView
+                android:id="@+id/user_details_registered_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/separation_margin_1"
+                android:layout_toEndOf="@id/user_details_registered_date_icon"
+                android:text="@string/user_details_registered_date"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_h6" />
+
+            <TextView
+                android:id="@+id/user_details_registered_date_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/user_details_registered_date"
+                android:layout_marginStart="@dimen/separation_margin_2"
+                android:layout_toEndOf="@+id/user_details_registered_date"
+                android:textSize="@dimen/text_body1" />
+
+            <ImageView
+                android:id="@+id/user_details_location_icon"
+                android:layout_width="@dimen/icon_medium"
+                android:layout_height="@dimen/icon_medium"
+                android:layout_below="@id/user_details_registered_date"
+                android:layout_marginTop="@dimen/separation_margin_2"
+                android:contentDescription="@string/user_details_location"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/user_details_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_details_registered_date"
+                android:layout_marginStart="@dimen/separation_margin_1"
+                android:layout_marginTop="@dimen/separation_margin_2"
+                android:layout_toEndOf="@+id/user_details_location_icon"
+                android:text="@string/user_details_location"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_h6" />
+
+            <TextView
+                android:id="@+id/user_details_location_street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_details_location_icon"
+                android:layout_alignStart="@+id/user_details_registered_date"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_body1" />
+
+            <TextView
+                android:id="@+id/user_details_location_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_details_location_street"
+                android:layout_alignStart="@+id/user_details_registered_date"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_body1" />
+
+            <TextView
+                android:id="@+id/user_details_location_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_details_location_city"
+                android:layout_alignStart="@+id/user_details_registered_date"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_body1" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

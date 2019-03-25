@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">MyTuentiApp</string>
+
+    <!--Bottom navigation-->
+    <string name="bottom_navigation_all">Todos</string>
+    <string name="bottom_navigation_favorites">Favoritos</string>
+    <string name="bottom_navigation_close_users">Localización</string>
+
+    <!--All users-->
+    <string name="all_users_empty_message">No existen usuarios para mostrar…</string>
+    <string name="all_users_user_deleted">¡Usuario borrado correctamente!</string>
+    <string name="all_users_sort">Ordenar</string>
+
+    <!--Users-->
+    <string name="item_user_delete">Eliminar</string>
+    <string name="item_user_favorite">Favorito</string>
+    <string name="item_user_phone">Teléfono</string>
+    <string name="item_user_mail">Correo electrónico</string>
+
+    <!--User details-->
+    <string name="user_details_location">Localización:</string>
+    <string name="user_details_registered_date">Registro:</string>
+    <string name="user_details_error">No se puede recuperar la información del usuario</string>
+    <string name="user_details_male">Hombre</string>
+    <string name="user_details_female">Mujer</string>
+
+    <!--Error-->
+    <string name="network_error">Error de red, inténtalo de nueavo.</string>
+    <string name="database_error">Error de la base de datos, inténtalo de nueavo.</string>
+    <string name="all_users_search">Buscar</string>
+
+    <!--Transition-->
+    <string name="trans_profile_image_users">trans_profile_image_users</string>
+</resources>

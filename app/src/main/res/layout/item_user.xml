@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_layout_margin"
+        android:layout_marginTop="@dimen/separation_margin_1"
+        android:layout_marginEnd="@dimen/default_layout_margin"
+        android:layout_marginBottom="@dimen/separation_margin_1"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <RelativeLayout
+            android:id="@+id/item_user_layout"
+            style="@style/backgroundClickable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_user_profile_image"
+                android:layout_width="@dimen/avatar_default"
+                android:layout_height="@dimen/avatar_default"
+                android:layout_marginStart="@dimen/separation_margin_1"
+                android:layout_marginTop="@dimen/separation_margin_1"
+                android:layout_marginBottom="@dimen/separation_margin_1"
+                android:transitionName="@string/trans_profile_image_users"
+                app:civ_circle_background_color="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_layout_margin"
+                android:layout_marginTop="@dimen/separation_margin_1"
+                android:layout_marginBottom="@dimen/separation_margin_1"
+                android:layout_toStartOf="@id/item_user_delete_button"
+                android:layout_toEndOf="@+id/item_user_profile_image">
+
+                <TextView
+                    android:id="@+id/item_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_body1"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/item_user_mail_icon"
+                    android:layout_width="@dimen/icon_small"
+                    android:layout_height="@dimen/icon_small"
+                    android:layout_below="@+id/item_user_name"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/item_user_mail"
+                    android:src="@drawable/ic_mail" />
+
+                <TextView
+                    android:id="@+id/item_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/item_user_name"
+                    android:layout_toEndOf="@id/item_user_mail_icon"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/text_caption" />
+
+                <ImageView
+                    android:id="@+id/item_user_phone_icon"
+                    android:layout_width="@dimen/icon_small"
+                    android:layout_height="@dimen/icon_small"
+                    android:layout_below="@+id/item_user_email"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/item_user_phone"
+                    android:src="@drawable/ic_phone" />
+
+                <TextView
+                    android:id="@+id/item_user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/item_user_email"
+                    android:layout_toEndOf="@+id/item_user_phone_icon"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/text_caption" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/item_user_delete_button"
+                style="@style/ImageButton"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/separation_margin_2"
+                android:layout_toStartOf="@+id/item_user_favorite_button"
+                android:contentDescription="@string/item_user_delete"
+                android:src="@drawable/ic_delete" />
+
+            <ImageButton
+                android:id="@+id/item_user_favorite_button"
+                style="@style/ImageButton"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/separation_margin_2"
+                android:layout_marginEnd="@dimen/separation_margin_1"
+                android:contentDescription="@string/item_user_favorite"
+                android:src="@drawable/ic_star_deactivate" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

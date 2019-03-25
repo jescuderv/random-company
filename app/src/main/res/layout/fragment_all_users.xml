@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.fragment.AllUsersFragment">
+
+    <SearchView
+        android:id="@+id/all_users_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/default_layout_margin"
+        android:layout_marginTop="@dimen/separation_margin_2"
+        android:layout_marginEnd="@dimen/default_layout_margin"
+        android:layout_marginBottom="@dimen/separation_margin_1"
+        android:layout_toStartOf="@+id/all_users_sort_button"
+        android:background="@drawable/box_rounded"
+        android:elevation="@dimen/card_elevation"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@android:color/transparent"
+        android:queryHint="@string/all_users_search" />
+
+    <ImageButton
+        android:id="@+id/all_users_sort_button"
+        style="@style/ImageButton"
+        android:layout_alignTop="@+id/all_users_search_view"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/default_layout_margin"
+        android:background="@drawable/box_rounded"
+        android:contentDescription="@string/all_users_sort"
+        android:src="@drawable/ic_sort_default" />
+
+    <TextView
+        android:id="@+id/all_users_empty_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/default_layout_margin"
+        android:layout_marginEnd="@dimen/default_layout_margin"
+        android:text="@string/all_users_empty_message"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_h5"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/all_users_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/all_users_progress"
+        android:layout_below="@+id/all_users_search_view"
+        android:scrollbars="vertical" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/all_users_retrieve_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/default_layout_margin"
+        android:src="@drawable/ic_add" />
+
+    <ProgressBar
+        android:id="@+id/all_users_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
